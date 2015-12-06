@@ -1,0 +1,17 @@
+<div class="jumbotron">	
+	<input type="text" ng-model="searchVenue" class="form-control" placeholder="Filter venues">
+</div>
+
+<div class="list-group">
+	<div class="list-group-item" ng-repeat="venue in venues.data | filter: searchVenue">
+		<div class="row">
+			<div class="col-sm-4 text-center">
+				<img style="max-width:100%;" ng-src="http://easy-order-app.com/{{ venue.logo }}">
+			</div>
+			<div class="col-sm-8">
+				<h3>{{ venue.name }}</h3>
+				<p> {{ venue.description }} </p>
+			</div>
+		</div>
+	</div>
+</div>

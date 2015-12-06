@@ -4,7 +4,7 @@
 angular.module('Authentication', []);
 angular.module('Home', []);
 
-angular.module('BasicHttpAuthExample', [
+angular.module('sacApp', [
     'Authentication',
     'Home',
     'ngRoute',
@@ -22,6 +22,16 @@ angular.module('BasicHttpAuthExample', [
         .when('/', {
             controller: 'HomeController',
             templateUrl: 'modules/home/views/home.html'
+        })
+
+        .when('/dashboard', {
+            controller: 'DashboardController',
+            templateUrl: 'views/dashboard.html'
+        })
+
+        .when('/venues', {
+            controller: 'VenuesController',
+            templateUrl: 'views/venues.html'
         })
 
         .otherwise({ redirectTo: '/login' });
